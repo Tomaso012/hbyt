@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HBYT • Apps</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1:#0f1220; --bg2:#1a1f3a;
+  --acc:#7c5cff; --acc2:#18d2ff;
+  --text:#e9ecf1; --muted:#9aa3b2;
+  --card:#141832cc; --card-border:#2e345b;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+body{
+  margin:0;font-family:Inter,sans-serif;
+  background: radial-gradient(1000px 600px at 10% 10%, #1d2243 0%, transparent 70%),
+              radial-gradient(800px 500px at 90% 90%, #112c3b 0%, transparent 70%),
+              linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 100%);
+  color:var(--text);
+  display:flex;flex-direction:column;align-items:center;
+  min-height:100vh;padding:40px 20px;
+}
+header{text-align:center;margin-bottom:50px;}
+.logo{
+  width:80px;height:80px;border-radius:20px;
+  background:conic-gradient(from 210deg,var(--acc),var(--acc2));
+  display:grid;place-items:center;color:white;font-weight:800;font-size:24px;
+  box-shadow:0 6px 18px rgba(124,92,255,.35), inset 0 0 18px rgba(24,210,255,.35);
+  margin:0 auto 20px;
+}
+h1{margin:0;font-size:36px;font-weight:800;letter-spacing:.5px}
+p{color:var(--muted);margin-top:10px;font-size:16px}
+h2.section-title{
+  margin:60px 0 20px;text-align:center;font-size:22px;font-weight:700;
+  background:linear-gradient(90deg,var(--acc),var(--acc2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* zvětšeno z 300px */
+  gap: 28px;
+  width: 100%;
+  max-width: 1200px; /* zvětšeno z 1000px */
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 35px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, border .2s ease;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px) saturate(120%);
+  min-height: 160px; /* trochu vyšší */
+}
+.card:hover{
+  transform:translateY(-4px);
+  border-color:var(--acc);
+  box-shadow:0 10px 25px rgba(124,92,255,.4);
+}
+.card h3 {
+  margin: 10px 0 8px;
+  font-size: 23px; /* o něco větší */
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--acc), var(--acc2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card p{margin:0;color:var(--muted);font-size:15px}
+footer{margin-top:60px;color:var(--muted);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">HT</div>
+    <h1>HBYT</h1>
+    <p>Vyber si aplikaci</p>
+  </header>
+<!--
+  <h2 class="section-title">🧩 Funkční aplikace</h2>
+  <div class="grid">
+    <div class="card" onclick="location.href='index.html'">
+      <h3>HBYT FileShare</h3>
+      <p>Rychlé sdílení souborů mezi zařízeními</p>
+    </div>
+    <div class="card" onclick="location.href='index.html'">
+      <h3>HBYT Tools</h3>
+      <p>Praktické nástroje a konvertory</p>
+    </div>
+    <div class="card" onclick="location.href='index.html'">
+      <h3>HBYT AI</h3>
+      <p>Umělá inteligence a asistenti</p>
+    </div>
+  </div>
+-->
+  <h2 class="section-title">🎬 Přehrávače / Stahovače</h2>
+  <div class="grid">
+    <div class="card" onclick="location.href='play-prehrajto.html'">
+      <h3>PLAY - Přehrajto</h3>
+      <p>Přímé odkazy na videa z <strong>prehrajto.cz</strong></p>
+    </div>
+    <div class="card" onclick="location.href='play-youtube.html'">
+      <h3>PLAY - YOUTUBE</h3>
+      <p>Přímé odkazy na videa z <strong>youtube.com</strong></p>
+    </div>
+    <div class="card" onclick="location.href='download-youtube.html'">
+      <h3>DOWNLOAD - YOUTUBE</h3>
+      <p>Stahování videí přímo ze <strong>youtube.com</strong></p>
+    </div>
+  </div>
+
+  <footer>© 2025 HBYT • All rights reserved</footer>
+</body>
+</html>
